@@ -5,4 +5,5 @@ export default app
 
 import "./modules/module-debug"
 import "./modules/module-config"
-import "./modules/module-accesspoints"
+// import "./modules/module-accesspoints"
+import "./modules/module-dummy"
