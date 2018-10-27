@@ -1,0 +1,7 @@
+body {
+    background-color: var(--light);
+}
+
+.container {
+    margin-top: 15%;
+}
