@@ -59,6 +59,7 @@ body {
 }
 
 .navbar {
+    background-color: var(--light);
     border: none;
     border-bottom: 2px solid var(--darker);
 }
@@ -85,4 +86,25 @@ body {
 .panel-heading {
     background: var(--darker) !important;
     color: white !important;
+}
+
+.panel-body .data-header {
+    font-weight: bold;
+}
+
+.panel-action {
+    float: right;
+    padding-top: 0px;
+    padding-bottom: 0px;
+    padding-left: 3px;
+    padding-right: 3px;
+}
+
+.data-header {
+    margin-top: 8px;
+    margin-bottom: 8px;
+}
+
+select option {
+    width: 80%;
 }
