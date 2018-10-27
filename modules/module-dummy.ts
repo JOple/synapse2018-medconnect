@@ -24,5 +24,5 @@ app.get("/register", (req, res) => {
 })
 
 app.get("*", (req, res) => {
-    res.send("Sorry 404 page is here<br>Go to /login/:id to test functionality")
+    res.redirect("/login/" + "sadkhasd")
 })
