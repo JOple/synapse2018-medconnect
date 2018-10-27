@@ -1,15 +1,11 @@
 import app from "../index"
 import config from "../config";
 
+import { personalAccounts, medicalAccounts } from "../db/accounts"
+import { accessRights } from "../db/access-rights"
+
 import uuidv4 = require('uuid/v4')
 
-import { personalAccounts, medicalAccounts } from "../db/accounts";
-
-interface AccessRights {
-    [key: string]: Set<string>
-}
-
-const cache: AccessRights = {}
 
 app.post("/personal_login", (req, res) => {
     let body;
@@ -54,7 +50,7 @@ app.post("/personal_login", (req, res) => {
     }
 
     let accessKey = uuidv4();
-    cache[accessKey] = new Set(account.resources)
+    accessRights[accessKey] = new Set(account.resources)
 
     res.json({
         accessKey: accessKey
@@ -103,7 +99,7 @@ app.post("/medical_login", (req, res) => {
     }
 
     let accessKey = uuidv4();
-    cache[accessKey] = new Set([...account.resources, resourceId])
+    accessRights[accessKey] = new Set([...account.resources, resourceId])
 
     res.json({
         accessKey: accessKey
@@ -119,7 +115,7 @@ app.get("/records/:id", (req, res) => {
     }
 
     let accessKey = req.header(config.allowRecordAccessHeader)
-    let allowedRecords = cache[accessKey]
+    let allowedRecords = accessRights[accessKey]
 
     if (!allowedRecords || allowedRecords.size == 0) {
         res.redirect("/login/" + id)
