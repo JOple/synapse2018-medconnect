@@ -87,8 +87,18 @@ function fillPatientInfo() {
     addInputSelect(id, "Civil Status", ["Single", "Married", "Divorced"], "Single");
 }
 
+function fillVitals() {
+    var id = "#vitals";
+    addInputText(id, "Height (in cm)", "190", "number");
+    addInputText(id, "Weight (in pounds)", "140", "number");
+    addInputText(id, "Temperature (in celsius)", "26.5", "number");
+    addInputSelect(id, "Temperature Site", ["Axillary", "Oral", "Rectal"], "Oral");
+    addInputText(id, "Blood Pressure", "120/80");
+}
+
 $(document).ready(function () {
     fillPatientInfo();
+    fillVitals();
 
     $(".edit-btn").on("click", function () {
         $(this).siblings(".panel-action").removeClass("hide");
@@ -145,4 +155,11 @@ $(document).ready(function () {
 
         });
     });
+
+    $("#vitalsDates").change(function () {
+        $("#vitalsDates option:selected").each(function () {
+            $($("#vitals").find(".panel-data")[1]).find(".data span").text($(this).data("height"));
+            $($("#vitals").find(".panel-data")[2]).find(".data span").text($(this).data("weight"));
+        });
+    })
 });

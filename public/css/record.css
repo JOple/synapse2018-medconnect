@@ -1,5 +1,5 @@
 body {
-    background-image: url("../img/doc2.jpg");
+    background-color: var(--white);
 }
 
 #mySidebar {
@@ -59,13 +59,17 @@ body {
 }
 
 .navbar {
-    background-color: var(--light);
+    background-color: var(--silver);
     border: none;
     border-bottom: 2px solid var(--darker);
 }
 
 .navbar-header {
     margin-left: -15px !important;
+}
+
+#logo {
+    margin-left: 5px;
 }
 
 #openNav {
