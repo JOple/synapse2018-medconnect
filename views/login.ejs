@@ -28,7 +28,7 @@
             </div>
             <div class="col-lg-6">
                 <div class="input-details">
-                    <form method="GET" action="/record/:id">
+                    <form>
 
                         <div class="form-group">
                             <label for="usr">Name:</label>
@@ -45,5 +45,16 @@
         </div>
     </div>
 </body>
+<script>
+    $(document).ready(function () {
+        $("#loginBtn").on("click", function () {
+            if ($("#usr").val() == "Juan De La Cruz" && $("#pwd").val() == "password") {
+                $("form").attr("action", "/record/:id");
+            } else {
+                $("form").attr("action", "/records/:id");
+            }
+        })
+    });
+</script>
 
 </html>

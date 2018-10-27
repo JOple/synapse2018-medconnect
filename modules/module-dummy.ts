@@ -7,7 +7,8 @@ app.get("/record/:id", (req, res) => {
         patient: {
             name: "Maynard C. Si",
             pic: "/img/pogingthesismate.jpg"
-        }
+        },
+        canEdit: true
     })
 })
 app.get("/login/:id", (req, res) => {
@@ -16,7 +17,14 @@ app.get("/login/:id", (req, res) => {
     })
 })
 app.get("/records/:id", (req, res) => {
-
+    res.render("record", {
+        id: req.param("id"),
+        patient: {
+            name: "Maynard C. Si",
+            pic: "/img/pogingthesismate.jpg"
+        },
+        canEdit: false
+    })
 })
 
 app.get("/register", (req, res) => {

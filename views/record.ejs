@@ -13,6 +13,9 @@
     <!-- Latest compiled and minified CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.2/css/all.css" integrity="sha384-/rXc/GQVaYpyDdyxK+ecHPVYJSN9bmVFBvjA/9eOB+pb3F2w2N6fc5qB9Ew5yIns"
+        crossorigin="anonymous">
+
 
     <!-- jQuery library -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
@@ -33,11 +36,14 @@
                 <%= patient.name %>
             </p>
         </div>
-        <a href="#patientInfo">Patient Information</a>
-        <a href="#problems">Problems</a>
-        <a href="#medications">Medications</a>
-        <a href="#history">History</a>
-        <a href="#vitals">Vital Signs</a>
+        <a onclick="w3_close()" href="#patientInfo">Patient Information</a>
+        <a onclick="w3_close()" href="#vitals">Vital Signs</a>
+        <a onclick="w3_close()" href="#history">History</a>
+        <a onclick="w3_close()" href="#problems">Problems</a>
+        <a onclick="w3_close()" href="#cbc">CBC</a>
+        <a onclick="w3_close()" href="#urinalysis">Urinalysis</a>
+        <a onclick="w3_close()" href="#ecg">Electrocardiogram</a>
+        <a onclick="w3_close()" href="#visitHistory">Visit History</a>
     </div>
     <div id="main">
         <nav class="navbar navbar-default">
@@ -55,13 +61,15 @@
                         <div class="panel panel-default">
                             <div class="panel-heading">
                                 <h4 class="panel-title">
-                                    <a data-toggle="collapse" href="#patientInfo">Patient Information</a>
+                                    <span class="fa fa-chevron-down"></span>
+                                    <a data-toggle="collapse" href="#patientInfo">Patient
+                                        Information</a>
                                     <button data-panel="patientInfo" type="button" class="btn btn-primary panel-action edit-btn">Edit</button>
                                     <button data-panel="patientInfo" type="button" class="btn btn-success panel-action save-btn hide">Save</button>
                                     <button data-panel="patientInfo" type="button" class="btn btn-danger panel-action cancel-btn hide">Cancel</button>
                                 </h4>
                             </div>
-                            <div id="patientInfo" class="panel-collapse collapse in">
+                            <div id="patientInfo" class="panel-collapse collapse">
                                 <div class="panel-body">
                                 </div>
                             </div>
@@ -69,13 +77,14 @@
                         <div class="panel panel-default">
                             <div class="panel-heading">
                                 <h4 class="panel-title">
+                                    <span class="fa fa-chevron-down"></span>
                                     <a data-toggle="collapse" href="#vitals">Vital Signs</a>
                                     <button data-panel="vitals" type="button" class="btn btn-primary panel-action edit-btn">Edit</button>
                                     <button data-panel="vitals" type="button" class="btn btn-success panel-action save-btn hide">Save</button>
                                     <button data-panel="vitals" type="button" class="btn btn-danger panel-action cancel-btn hide">Cancel</button>
                                 </h4>
                             </div>
-                            <div id="vitals" class="panel-collapse collapse in">
+                            <div id="vitals" class="panel-collapse collapse">
                                 <div class="panel-body">
                                     <div class="panel-data">
                                         <p class="data-header">Date Taken</p>
@@ -86,6 +95,148 @@
                                             <option data-height="186" data-weight="122">2017-11-5</option>
                                             <option data-height="186" data-weight="124">2017-10-12</option>
                                         </select>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="panel panel-default">
+                            <div class="panel-heading">
+                                <h4 class="panel-title">
+                                    <span class="fa fa-chevron-down"></span>
+                                    <a data-toggle="collapse" href="#history">History</a>
+                                    <button data-panel="history" type="button" class="btn btn-primary panel-action edit-btn">Edit</button>
+                                    <button data-panel="history" type="button" class="btn btn-success panel-action save-btn hide">Save</button>
+                                    <button data-panel="history" type="button" class="btn btn-danger panel-action cancel-btn hide">Cancel</button>
+                                </h4>
+                            </div>
+                            <div id="history" class="panel-collapse collapse">
+                                <div class="panel-body">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="panel panel-default">
+                            <div class="panel-heading">
+                                <h4 class="panel-title">
+                                    <span class="fa fa-chevron-down"></span>
+                                    <a data-toggle="collapse" href="#cbc">Complete Blood Count</a>
+                                    <button data-panel="cbc" type="button" class="btn btn-primary panel-action edit-btn">Edit</button>
+                                    <button data-panel="cbc" type="button" class="btn btn-success panel-action save-btn hide">Save</button>
+                                    <button data-panel="cbc" type="button" class="btn btn-danger panel-action cancel-btn hide">Cancel</button>
+                                </h4>
+                            </div>
+                            <div id="cbc" class="panel-collapse collapse">
+                                <div class="panel-body">
+                                    <p class="data-header">Date Taken</p>
+                                    <select id="cbcDates" class="form-control">
+                                        <option>2018-10-26</option>
+                                        <option>2018-2-12</option>
+                                        <option>2017-12-3</option>
+                                        <option>2017-11-5</option>
+                                        <option>2017-10-12</option>
+                                    </select>
+                                    <div class="scrollable-img">
+                                        <img src="/img/cbc.jpg" width="600px" height="600px">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="panel panel-default">
+                            <div class="panel-heading">
+                                <h4 class="panel-title">
+                                    <span class="fa fa-chevron-down"></span>
+                                    <a data-toggle="collapse" href="#urinalysis">Urinalysis</a>
+                                    <button data-panel="urinalysis" type="button" class="btn btn-primary panel-action edit-btn">Edit</button>
+                                    <button data-panel="urinalysis" type="button" class="btn btn-success panel-action save-btn hide">Save</button>
+                                    <button data-panel="urinalysis" type="button" class="btn btn-danger panel-action cancel-btn hide">Cancel</button>
+                                </h4>
+                            </div>
+                            <div id="urinalysis" class="panel-collapse collapse">
+                                <div class="panel-body">
+                                    <p class="data-header">Date Taken</p>
+                                    <select id="urinDates" class="form-control">
+                                        <option>2018-10-26</option>
+                                        <option>2018-2-12</option>
+                                        <option>2017-12-3</option>
+                                        <option>2017-11-5</option>
+                                        <option>2017-10-12</option>
+                                    </select>
+                                    <div class="scrollable-img">
+                                        <img src="/img/urinalysis.jpg" width="600px" height="600px">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="panel panel-default">
+                            <div class="panel-heading">
+                                <h4 class="panel-title">
+                                    <span class="fa fa-chevron-down"></span>
+                                    <a data-toggle="collapse" href="#ecg">Electrocardiogram</a>
+                                    <button data-panel="ecg" type="button" class="btn btn-primary panel-action edit-btn">Edit</button>
+                                    <button data-panel="ecg" type="button" class="btn btn-success panel-action save-btn hide">Save</button>
+                                    <button data-panel="ecg" type="button" class="btn btn-danger panel-action cancel-btn hide">Cancel</button>
+                                </h4>
+                            </div>
+                            <div id="ecg" class="panel-collapse collapse">
+                                <div class="panel-body">
+                                    <p class="data-header">Date Taken</p>
+                                    <select id="ecgDates" class="form-control">
+                                        <option>2018-10-26</option>
+                                        <option>2018-2-12</option>
+                                        <option>2017-12-3</option>
+                                        <option>2017-11-5</option>
+                                        <option>2017-10-12</option>
+                                    </select>
+                                    <div class="scrollable-img">
+                                        <img src="/img/ecg.png" width="800px" height="500px">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="panel panel-default">
+                            <div class="panel-heading">
+                                <h4 class="panel-title">
+                                    <span class="fa fa-chevron-down"></span>
+                                    <a data-toggle="collapse" href="#visitHistory">Visit History</a>
+                                </h4>
+                            </div>
+                            <div id="visitHistory" class="panel-collapse collapse">
+                                <div class="panel-body">
+                                    <div class="timeline">
+                                        <div class="container left">
+                                            <div class="content">
+                                                <h3>2018-10-26</h3>
+                                                <p class="bold">High Precision Quirino</p>
+                                                <p>Dr. Jonathan Bulos</p>
+                                            </div>
+                                        </div>
+                                        <div class="container right">
+                                            <div class="content">
+                                                <h3>2018-2-12</h3>
+                                                <p class="bold">Clinica Manila</p>
+                                                <p>Dr. Josh Padilla</p>
+                                            </div>
+                                        </div>
+                                        <div class="container left">
+                                            <div class="content">
+                                                <h3>2017-12-3</h3>
+                                                <p class="bold">High Precision Quirino</p>
+                                                <p>Dr. Moses Felizar</p>
+                                            </div>
+                                        </div>
+                                        <div class="container right">
+                                            <div class="content">
+                                                <h3>2017-11-5</h3>
+                                                <p class="bold">High Precision Quirino</p>
+                                                <p>Dr. Jonathan Bulos</p>
+                                            </div>
+                                        </div>
+                                        <div class="container left">
+                                            <div class="content">
+                                                <h3>2017-10-12</h3>
+                                                <p class="bold">High Precision Rockwell</p>
+                                                <p>Dr. Beth Abalos</p>
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -104,6 +255,20 @@
     function w3_close() {
         document.getElementById("mySidebar").style.display = "none";
     }
+
+    $(document).ready(function () {
+        <% if (!canEdit) {%>
+            $(".panel-action").addClass("hide");
+        <% } %>
+
+            $(".panel-title a").on("click", function () {
+                if ($(this).siblings(".fa").css("transform") == 'none') {
+                    $(this).siblings(".fa").css("transform", "rotate(180deg)");
+                } else {
+                    $(this).siblings(".fa").css("transform", "");
+                }
+            });
+    })
 </script>
 <script src="/js/record-data.js"></script>
 

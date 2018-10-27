@@ -96,9 +96,25 @@ function fillVitals() {
     addInputText(id, "Blood Pressure", "120/80");
 }
 
+function fillHistory() {
+    var id = "#history";
+    addInputSelect(id, "Stroke", ["Yes", "No"], "No");
+    addInputSelect(id, "Heart Trouble", ["Yes", "No"], "Yes");
+    addInputSelect(id, "High Blood Pressure", ["Yes", "No"], "No");
+    addInputSelect(id, "Diabetes", ["Yes", "No"], "No");
+    addInputSelect(id, "Arthritis", ["Yes", "No"], "No");
+    addInputSelect(id, "Gout", ["Yes", "No"], "Yes");
+    addInputSelect(id, "Seizures", ["Yes", "No"], "No");
+    addInputSelect(id, "Mental Illness", ["Yes", "No"], "No");
+    addInputSelect(id, "Depression", ["Yes", "No"], "No");
+    addInputSelect(id, "Cancer", ["Yes", "No"], "No");
+    addInputSelect(id, "Alcoholism", ["Yes", "No"], "No");
+}
+
 $(document).ready(function () {
     fillPatientInfo();
     fillVitals();
+    fillHistory();
 
     $(".edit-btn").on("click", function () {
         $(this).siblings(".panel-action").removeClass("hide");
