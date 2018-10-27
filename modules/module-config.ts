@@ -1,7 +1,7 @@
-import config from "./config"
-import app from "./index"
+import config from "../config"
+import app from "../index"
 
-import * as utils from "./utils/server-utils"
+import * as utils from "../utils/server-utils"
 
 import express = require('express')
 import session = require('express-session')

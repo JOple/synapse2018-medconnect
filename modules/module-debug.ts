@@ -1,5 +1,5 @@
-import config from "./config"
-import app from "./index"
+import config from "../config"
+import app from "../index"
 
 import morgan = require("morgan")
 
