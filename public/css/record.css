@@ -262,6 +262,7 @@ select option {
 }
 
 .scrollable-img {
+    margin-top: 10px;
     width: 100%;
     overflow-x: scroll;
 }

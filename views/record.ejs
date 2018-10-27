@@ -39,7 +39,8 @@
         <a onclick="w3_close()" href="#patientInfo">Patient Information</a>
         <a onclick="w3_close()" href="#vitals">Vital Signs</a>
         <a onclick="w3_close()" href="#history">History</a>
-        <a onclick="w3_close()" href="#problems">Problems</a>
+        <a onclick="w3_close()" href="#review">Review of Systems</a>
+        <a onclick="w3_close()" href="#physical">Physical Exam</a>
         <a onclick="w3_close()" href="#cbc">CBC</a>
         <a onclick="w3_close()" href="#urinalysis">Urinalysis</a>
         <a onclick="w3_close()" href="#ecg">Electrocardiogram</a>
@@ -118,10 +119,53 @@
                             <div class="panel-heading">
                                 <h4 class="panel-title">
                                     <span class="fa fa-chevron-down"></span>
+                                    <a data-toggle="collapse" href="#review">Review of Systems</a>
+                                    <button data-panel="review" type="button" class="btn btn-primary panel-action edit-btn">Edit</button>
+                                    <button data-panel="review" type="button" class="btn btn-success panel-action save-btn hide">Save</button>
+                                    <button data-panel="review" type="button" class="btn btn-danger panel-action cancel-btn hide">Cancel</button>
+                                </h4>
+                            </div>
+                            <div id="review" class="panel-collapse collapse">
+                                <div class="panel-body">
+                                    <p class="data-header">Date Taken</p>
+                                    <select id="reviewDates" class="form-control">
+                                        <option>2018-10-26</option>
+                                        <option>2018-2-12</option>
+                                        <option>2017-12-3</option>
+                                        <option>2017-11-5</option>
+                                        <option>2017-10-12</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="panel panel-default">
+                            <div class="panel-heading">
+                                <h4 class="panel-title">
+                                    <span class="fa fa-chevron-down"></span>
+                                    <a data-toggle="collapse" href="#physical">Physical Exam</a>
+                                    <button data-panel="physical" type="button" class="btn btn-primary panel-action edit-btn">Edit</button>
+                                    <button data-panel="physical" type="button" class="btn btn-success panel-action save-btn hide">Save</button>
+                                    <button data-panel="physical" type="button" class="btn btn-danger panel-action cancel-btn hide">Cancel</button>
+                                </h4>
+                            </div>
+                            <div id="physical" class="panel-collapse collapse">
+                                <div class="panel-body">
+                                    <p class="data-header">Date Taken</p>
+                                    <select id="physicalDates" class="form-control">
+                                        <option>2018-10-26</option>
+                                        <option>2018-2-12</option>
+                                        <option>2017-12-3</option>
+                                        <option>2017-11-5</option>
+                                        <option>2017-10-12</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="panel panel-default">
+                            <div class="panel-heading">
+                                <h4 class="panel-title">
+                                    <span class="fa fa-chevron-down"></span>
                                     <a data-toggle="collapse" href="#cbc">Complete Blood Count</a>
-                                    <button data-panel="cbc" type="button" class="btn btn-primary panel-action edit-btn">Edit</button>
-                                    <button data-panel="cbc" type="button" class="btn btn-success panel-action save-btn hide">Save</button>
-                                    <button data-panel="cbc" type="button" class="btn btn-danger panel-action cancel-btn hide">Cancel</button>
                                 </h4>
                             </div>
                             <div id="cbc" class="panel-collapse collapse">
@@ -145,9 +189,6 @@
                                 <h4 class="panel-title">
                                     <span class="fa fa-chevron-down"></span>
                                     <a data-toggle="collapse" href="#urinalysis">Urinalysis</a>
-                                    <button data-panel="urinalysis" type="button" class="btn btn-primary panel-action edit-btn">Edit</button>
-                                    <button data-panel="urinalysis" type="button" class="btn btn-success panel-action save-btn hide">Save</button>
-                                    <button data-panel="urinalysis" type="button" class="btn btn-danger panel-action cancel-btn hide">Cancel</button>
                                 </h4>
                             </div>
                             <div id="urinalysis" class="panel-collapse collapse">
@@ -171,9 +212,6 @@
                                 <h4 class="panel-title">
                                     <span class="fa fa-chevron-down"></span>
                                     <a data-toggle="collapse" href="#ecg">Electrocardiogram</a>
-                                    <button data-panel="ecg" type="button" class="btn btn-primary panel-action edit-btn">Edit</button>
-                                    <button data-panel="ecg" type="button" class="btn btn-success panel-action save-btn hide">Save</button>
-                                    <button data-panel="ecg" type="button" class="btn btn-danger panel-action cancel-btn hide">Cancel</button>
                                 </h4>
                             </div>
                             <div id="ecg" class="panel-collapse collapse">

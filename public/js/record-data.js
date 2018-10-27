@@ -111,10 +111,43 @@ function fillHistory() {
     addInputSelect(id, "Alcoholism", ["Yes", "No"], "No");
 }
 
+function fillReview() {
+    var id = "#review";
+    addInputSelect(id, "Weight loss or gain", ["Yes", "No"], "No");
+    addInputSelect(id, "Fatigue", ["Yes", "No"], "No");
+    addInputSelect(id, "Fever or chills", ["Yes", "No"], "No");
+    addInputSelect(id, "Weakness", ["Yes", "No"], "No");
+    addInputSelect(id, "Trouble sleeping", ["Yes", "No"], "No");
+    addInputSelect(id, "Rashes", ["Yes", "No"], "No");
+    addInputSelect(id, "Lumps", ["Yes", "No"], "No");
+    addInputSelect(id, "Itching", ["Yes", "No"], "No");
+    addInputSelect(id, "Headache", ["Yes", "No"], "No");
+    addInputSelect(id, "Earache", ["Yes", "No"], "No");
+    addInputSelect(id, "Cough", ["Yes", "No"], "Yes");
+}
+
+function fillPhysical() {
+    var id = "#physical";
+    addInputSelect(id, "General Appearance", ["Normal", "Abnormal"], "Normal");
+    addInputSelect(id, "Integumentary", ["Normal", "Abnormal"], "Normal");
+    addInputSelect(id, "Musculoskeletal", ["Normal", "Abnormal"], "Normal");
+    addInputSelect(id, "Circulatory", ["Normal", "Abnormal"], "Normal");
+    addInputSelect(id, "Respiratory", ["Normal", "Abnormal"], "Normal");
+    addInputSelect(id, "Digestive", ["Normal", "Abnormal"], "Normal");
+    addInputSelect(id, "Genitourinary", ["Normal", "Abnormal"], "Normal");
+    addInputSelect(id, "Eyes", ["Normal", "Abnormal"], "Normal");
+    addInputSelect(id, "Ears", ["Normal", "Abnormal"], "Normal");
+    addInputSelect(id, "Neural System", ["Normal", "Abnormal"], "Normal");
+    addInputSelect(id, "Lymph Nodes", ["Normal", "Abnormal"], "Normal");
+    addInputSelect(id, "Mucous Membranes", ["Normal", "Abnormal"], "Normal");
+}
+
 $(document).ready(function () {
     fillPatientInfo();
     fillVitals();
     fillHistory();
+    fillReview();
+    fillPhysical();
 
     $(".edit-btn").on("click", function () {
         $(this).siblings(".panel-action").removeClass("hide");
