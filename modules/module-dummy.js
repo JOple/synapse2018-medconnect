@@ -17,6 +17,9 @@ index_1.default.get("/login/:id", (req, res) => {
 });
 index_1.default.get("/records/:id", (req, res) => {
 });
+index_1.default.get("/register", (req, res) => {
+    res.render("register");
+});
 index_1.default.get("*", (req, res) => {
     res.send("Sorry 404 page is here<br>Go to /login/:id to test functionality");
 });

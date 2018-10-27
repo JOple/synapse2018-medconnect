@@ -1,0 +1,8 @@
+body {
+    background: var(--darker);
+}
+
+.form-background {
+    background: var(--light)
+        /* background: rgba(154, 154, 154, 0.3) */
+}

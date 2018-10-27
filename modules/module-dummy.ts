@@ -19,6 +19,10 @@ app.get("/records/:id", (req, res) => {
 
 })
 
+app.get("/register", (req, res) => {
+    res.render("register")
+})
+
 app.get("*", (req, res) => {
     res.send("Sorry 404 page is here<br>Go to /login/:id to test functionality")
 })
