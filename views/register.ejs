@@ -25,10 +25,11 @@
 
 <body>
     <div class="container">
-        <div class="row form-background">
+        <div class="row form-background form-header">
             <div class="col-sm-6 col-sm-offset-3">
                 <h1>Register</h1>
             </div>
+            <hr>
         </div>
         <div class="row form-background">
             <div class="col-sm-6 col-sm-offset-3 ">
@@ -36,22 +37,22 @@
                     <div class="form-group">
                         <label for="input-email">Email</label>
                         <input class="form-control" type="email" id="input-email" placeholder="example@server.com">
-                        <p class="help-block">This is a field for Email</p>
+                        <p class="help-block"></p>
                     </div>
                     <div class="form-group">
                         <label for="input-password">Password</label>
                         <input class="form-control" type="password" id="input-password" placeholder="">
-                        <p class="help-block">This is a field for Password</p>
+                        <p class="help-block"></p>
                     </div>
                     <div class="form-group">
                         <label for="input-confirm-password">Confirm Password</label>
                         <input class="form-control" type="password" id="input-confirm-password" placeholder="">
-                        <p class="help-block">This is a field for Confirm Password</p>
+                        <p class="help-block"></p>
                     </div>
                     <div class="form-group">
                         <label for="input-birthday">Birthday</label>
                         <input class="form-control" type="date" id="input-birthday" placeholder="">
-                        <p class="help-block">This is a field for Birthday</p>
+                        <p class="help-block"></p>
                     </div>
                     <div class="form-group">
                         <label for="input-biological-sex">Biological Sex</label>
@@ -64,19 +65,39 @@
                             <input type="radio" name="input-biological-sex" id="input-biological-sex-female" value="female">
                             Female
                         </label>
-                        <p class="help-block">This is a field for Biological Sex</p>
+                        <p class="help-block"></p>
                     </div>
                     <div class="form-group">
                         <label for="input-address">Address</label>
                         <input class="form-control" type="text" id="input-address" placeholder="House No., Street, City">
-                        <p class="help-block">This is a field for Address</p>
+                        <p class="help-block"></p>
                     </div>
                     <div class="form-group">
-                        <label for="input-work/school">Work/School</label>
-                        <input class="form-control" type="text" id="input-work/school" placeholder="">
-                        <p class="help-block">This is a field for Work/School</p>
+                        <label for="input-work-school">Work/School</label>
+                        <input class="form-control" type="text" id="input-work-school" placeholder="">
+                        <p class="help-block"></p>
                     </div>
-                    <button type="submit" class="btn btn-default">Read Terms and Conditions</button>
+                    <div class="form-group">
+                        <label for="input-picture">Picture</label>
+                        <input class="form-control" type="file" accept="image/*" id="input-picture" placeholder="">
+                        <p class="help-block"></p>
+                    </div>
+                    <div class="form-group">
+                        <label for="input-agreement">Agreement</label>
+                        <br>
+                        <label class="checkbox-inline">
+                            <input type="checkbox" name="input-agreement" id="input-agreement-agree" value="male">
+                            I agree to the
+                            <a target="_blank" href="https://www.sec.gov/Archives/edgar/data/1077183/000119312512009414/d281487dex101.htm">
+                                Terms and Conditions
+                            </a>
+                            and
+                            <a target="_blank" href="https://www.sec.gov/Archives/edgar/data/1077183/000119312512009414/d281487dex101.htm">Privacy
+                                Policy
+                            </a>
+                        </label>
+                    </div>
+                    <button type="submit" class="btn btn-default">Accept</button>
                 </form>
             </div>
         </div>

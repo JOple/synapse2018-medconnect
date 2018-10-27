@@ -6,3 +6,7 @@ body {
     background: var(--light)
         /* background: rgba(154, 154, 154, 0.3) */
 }
+
+a {
+    color: var(--white)
+}
