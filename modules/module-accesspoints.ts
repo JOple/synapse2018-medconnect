@@ -121,12 +121,16 @@ app.get("/records/:id", (req, res) => {
         res.redirect("/login/" + id)
         return
     }
+
+    // TODO: Show records
 })
 app.get("/login/:id", (req, res) => {
 
+    // TODO: Show login, make sure login has access to config.allowRecordAccessHeader
 })
 app.get("/invalid_url", (req, res) => {
 
+    // TODO: Create 404 page
 })
 app.get("*", (req, res) => {
     res.redirect("/invalid_url")
