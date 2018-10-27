@@ -104,7 +104,7 @@ server.post("/medical_login", (req, res) => {
     }
 
     let accessKey = uuidv4();
-    cache[accessKey] = new Set(account.resources)
+    cache[accessKey] = new Set([...account.resources, resourceId])
 
     res.json({
         accessKey: accessKey
@@ -122,7 +122,7 @@ server.get("/records/:id", (req, res) => {
     let accessKey = req.header(config.allowRecordAccessHeader)
     let allowedRecords = cache[accessKey]
 
-    if (!allowedRecords) {
+    if (!allowedRecords || allowedRecords.size == 0) {
         res.redirect("/login/" + id)
         return
     }
