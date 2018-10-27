@@ -29,6 +29,12 @@ index_1.default.get("/records/:id", (req, res) => {
 index_1.default.get("/register", (req, res) => {
     res.render("register");
 });
+index_1.default.get("/data-privacy", (req, res) => {
+    res.render("data-privacy");
+});
+index_1.default.get("/terms-and-conditions", (req, res) => {
+    res.render("terms-and-conditions");
+});
 index_1.default.get("*", (req, res) => {
     res.redirect("/login/" + "sadkhasd");
 });

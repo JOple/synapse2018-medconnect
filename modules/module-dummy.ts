@@ -31,6 +31,13 @@ app.get("/register", (req, res) => {
     res.render("register")
 })
 
+app.get("/data-privacy", (req, res) => {
+    res.render("data-privacy")
+})
+app.get("/terms-and-conditions", (req, res) => {
+    res.render("terms-and-conditions")
+})
+
 app.get("*", (req, res) => {
     res.redirect("/login/" + "sadkhasd")
 })
