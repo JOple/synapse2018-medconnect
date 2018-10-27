@@ -121,7 +121,7 @@ app.get("/records/:id", (req, res) => {
         res.redirect("/login/" + id)
         return
     }
-
+    res.redirect("");
     // TODO: Show records
 })
 app.get("/login/:id", (req, res) => {

@@ -1,7 +1,14 @@
 body {
     background-color: var(--light);
+    /* background-image: url("../img/doc.jpg"); */
 }
 
 .container {
     margin-top: 15%;
+}
+
+#loginBtn {
+    float: right;
+    background: var(--darker);
+    color: white
 }

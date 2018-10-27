@@ -5,3 +5,10 @@
     --silver:#DEF2F1;
     --white:#FEFFFF;
 }
+
+.center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+}

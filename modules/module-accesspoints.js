@@ -105,6 +105,7 @@ index_1.default.get("/records/:id", (req, res) => {
         res.redirect("/login/" + id);
         return;
     }
+    res.redirect("");
     // TODO: Show records
 });
 index_1.default.get("/login/:id", (req, res) => {

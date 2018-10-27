@@ -1,0 +1,88 @@
+body {
+    background-image: url("../img/doc2.jpg");
+}
+
+#mySidebar {
+    background-color: var(--darker);
+
+}
+/* 
+.sidenav {
+    height: 100%;
+    width: 250px;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    overflow-x: hidden;
+    padding-top: 20px;
+} */
+
+#mySidebar a {
+    padding: 6px 8px 6px 16px;
+    text-decoration: none;
+    font-size: 1em;
+    color: rgb(160, 160, 160);
+    display: block;
+}
+
+.sidenav a:hover {
+    color: var(--white);
+}
+
+.main {
+    margin-left: 160px; /* Same as the width of the sidenav */
+    font-size: 28px; /* Increased text to enable scrolling */
+    padding: 0px 10px;
+}
+
+@media screen and (max-height: 450px) {
+    .sidenav {padding-top: 15px;}
+    .sidenav a {font-size: 18px;}
+}
+
+#sideLogo {
+    position: absolute;
+    bottom: 0;
+    left: 20px;
+}
+
+#patientPic {
+    border-radius: 50%;
+    margin: 0 auto;
+}
+
+#patientName {
+    font-size: 1.1em;
+    text-align: center;
+    color: white;
+}
+
+.navbar {
+    border: none;
+    border-bottom: 2px solid var(--darker);
+}
+
+.navbar-header {
+    margin-left: -15px !important;
+}
+
+#openNav {
+    background: var(--darker);
+    color: white;
+}
+
+#closeSideBar {
+    padding: 10px;
+    color: white;
+    font-size: 1.5em;
+}
+
+#closeSideBar:hover{
+    cursor: pointer;
+}
+
+.panel-heading {
+    background: var(--darker) !important;
+    color: white !important;
+}
