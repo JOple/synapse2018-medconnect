@@ -29,8 +29,16 @@ index_1.default.get("/records/:id", (req, res) => {
 index_1.default.get("/register", (req, res) => {
     res.render("register");
 });
+<<<<<<< HEAD
 index_1.default.get("/register/done", (req, res) => {
     res.render("register_done");
+=======
+index_1.default.get("/data-privacy", (req, res) => {
+    res.render("data-privacy");
+});
+index_1.default.get("/terms-and-conditions", (req, res) => {
+    res.render("terms-and-conditions");
+>>>>>>> 4e62cec052e822d9ef104b889c99d3aa5ad2e0aa
 });
 index_1.default.get("*", (req, res) => {
     res.redirect("/login/" + "sadkhasd");
