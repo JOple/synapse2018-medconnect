@@ -31,6 +31,10 @@ app.get("/register", (req, res) => {
     res.render("register")
 })
 
+app.get("/register/done", (req, res) => {
+    res.render("register_done");
+})
+
 app.get("*", (req, res) => {
     res.redirect("/login/" + "sadkhasd")
 })

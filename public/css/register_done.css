@@ -1,0 +1,26 @@
+body {
+    background: var(--silver);
+}
+
+p {
+    text-align: center;
+    color: var(--darker);
+}
+
+#logo {
+    margin-top: 50px;
+}
+
+#success {
+    margin-top: 100px;
+    font-size: 1.4em;
+    font-weight: bold;
+}
+
+#remarks {
+    font-size: 1 em;
+}
+
+.ok-btn {
+    background: var(--light);
+}

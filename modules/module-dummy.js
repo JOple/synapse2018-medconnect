@@ -29,6 +29,9 @@ index_1.default.get("/records/:id", (req, res) => {
 index_1.default.get("/register", (req, res) => {
     res.render("register");
 });
+index_1.default.get("/register/done", (req, res) => {
+    res.render("register_done");
+});
 index_1.default.get("*", (req, res) => {
     res.redirect("/login/" + "sadkhasd");
 });
