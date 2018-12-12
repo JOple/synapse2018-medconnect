@@ -11,4 +11,5 @@ import "./modules/module-dev"
 // import "./modules/module-accesspoints"
 import "./modules/module-dummy"
 
-app.listen(config.port || 8080, () => console.log("Server is online"))
+const port = config.port || 8080
+app.listen(port, () => console.log("Server is online at " + port))
